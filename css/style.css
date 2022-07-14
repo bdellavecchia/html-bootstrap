@@ -1,0 +1,101 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.collapsed {
+    display: none;
+}
+
+nav{
+    
+    background-color: white;
+    color: #4F4F4F;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+nav .mobile{
+    display: none;
+}
+
+nav .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button{
+    border: none;
+    background-color: white;
+    color: #4F4F4F;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav .logo{
+    padding: 10px 10px;
+    min-width: 250px;
+}
+
+nav a{
+    color: #4F4F4F;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+
+nav a:hover{
+    color: #4F4F4F;
+}
+
+nav .desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary{
+    display: flex;
+}
+
+nav .desktop .secondary.mini {
+    display: none;
+}
+
+@media screen and (max-width: 900px){
+    nav .logo{
+        min-width: 100;
+    }
+    nav .secondary.full {
+        display: none;
+    }
+    nav .secondary.mini{
+        display: block !important;
+    }
+    nav .secondary.mini .submenu {
+    
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        background-color: white;
+        position: absolute;
+        display: none;
+        width: 150px;
+        right: 0;
+    }
+    nav .secondary.mini:hover .submenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav .desktop{
+        display: none;
+    }
+    nav .mobile{
+        display: block;
+    }
+}
